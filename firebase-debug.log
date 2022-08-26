@@ -1,0 +1,49 @@
+[debug] [2022-08-24T03:18:27.285Z] ----------------------------------------------------------------------
+[debug] [2022-08-24T03:18:27.287Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chandu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-08-24T03:18:27.288Z] CLI Version:   11.8.0
+[debug] [2022-08-24T03:18:27.288Z] Platform:      win32
+[debug] [2022-08-24T03:18:27.288Z] Node Version:  v17.5.0
+[debug] [2022-08-24T03:18:27.293Z] Time:          Wed Aug 24 2022 08:48:27 GMT+0530 (India Standard Time)
+[debug] [2022-08-24T03:18:27.293Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-24T03:18:27.350Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-24T03:18:27.350Z] > authorizing via signed-in user (toosoonfamily11@gmail.com)
+[debug] [2022-08-24T03:18:27.351Z] [iam] checking project weather-forecast-926ea for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-08-24T03:18:27.352Z] > refreshing access token with scopes: []
+[debug] [2022-08-24T03:18:27.354Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-08-24T03:18:27.354Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-08-24T03:18:27.887Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-08-24T03:18:27.887Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-08-24T03:18:27.898Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-forecast-926ea:testIamPermissions [none]
+[debug] [2022-08-24T03:18:27.898Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-forecast-926ea:testIamPermissions x-goog-quota-user=projects/weather-forecast-926ea
+[debug] [2022-08-24T03:18:27.898Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-forecast-926ea:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-24T03:18:29.529Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-forecast-926ea:testIamPermissions 200
+[debug] [2022-08-24T03:18:29.529Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-forecast-926ea:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-24T03:18:29.533Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/weather-forecast-926ea [none]
+[debug] [2022-08-24T03:18:30.368Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/weather-forecast-926ea 200
+[debug] [2022-08-24T03:18:30.368Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/weather-forecast-926ea {"projectId":"weather-forecast-926ea","projectNumber":"753941193167","displayName":"weather-forecast","name":"projects/weather-forecast-926ea","resources":{"hostingSite":"weather-forecast-926ea"},"state":"ACTIVE","etag":"1_46f78f8d-c3ba-4b64-86e8-09ad121f5f0b"}
+[info] 
+[info] === Deploying to 'weather-forecast-926ea'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-08-24T03:18:30.378Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/weather-forecast-926ea [none]
+[debug] [2022-08-24T03:18:31.066Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/weather-forecast-926ea 200
+[debug] [2022-08-24T03:18:31.067Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/weather-forecast-926ea {"projectId":"weather-forecast-926ea","projectNumber":"753941193167","displayName":"weather-forecast","name":"projects/weather-forecast-926ea","resources":{"hostingSite":"weather-forecast-926ea"},"state":"ACTIVE","etag":"1_46f78f8d-c3ba-4b64-86e8-09ad121f5f0b"}
+[debug] [2022-08-24T03:18:31.074Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/753941193167/sites/weather-forecast-926ea/versions [none]
+[debug] [2022-08-24T03:18:31.074Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/753941193167/sites/weather-forecast-926ea/versions {"config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-08-24T03:18:32.586Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/753941193167/sites/weather-forecast-926ea/versions 500
+[debug] [2022-08-24T03:18:32.586Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/753941193167/sites/weather-forecast-926ea/versions {"error":{"code":500,"message":"Internal error encountered.","status":"INTERNAL"}}
+[error] 
+[error] Error: HTTP Error: 500, Internal error encountered.
+[debug] [2022-08-24T03:18:32.931Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500
+  }
+}
